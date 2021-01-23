@@ -30,10 +30,19 @@ public class ProfilePage {
         return userName;
     }
 
+    @FindBy (xpath = "//*[contains(text(), 'Почта')]")
+    private WebElement mailEnter;
+
     //метод нажатия кнопки пользователя
     public void entryMenu(){
         userMenu.click();
     }
+
+    //метод нажатия кнопки "почта"
+    public void entryMail(){
+        mailEnter.click();
+    }
+
     //метод нажатия кнопки выхода из аккаунта
     public void userLogout(){
         logoutBtn.click();

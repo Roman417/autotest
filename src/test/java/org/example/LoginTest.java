@@ -40,13 +40,16 @@ public class LoginTest {
         loginPage.clickLoginBtn();
         //получаем отображаемый логин и сравниваем его с логином из файла настроек
         Assert.assertEquals(profilePage.getUserName(), ConfProperties.getProperty("user"));
+
+        profilePage.entryMenu();
+        profilePage.entryMail();
     }
 
     // выход из аккаунта с закрытием браузера
     @AfterClass
     public static void tearDown(){
-        profilePage.entryMenu();
-        profilePage.userLogout();
+        //profilePage.entryMenu();
+       // profilePage.userLogout();
         driver.quit();
     }
 
