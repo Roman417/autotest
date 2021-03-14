@@ -17,7 +17,7 @@ public class LoginTest {
     @BeforeClass
     public static void setup(){
 
-        System.setProperty("webdriver.chrome.driver","D:\\webdriver\\chromedriver2\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
         // создание экземпляра драйвера
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
